@@ -12,12 +12,7 @@ const forecast=(latitude,longitude,callback)=>{
                       callback("Can't find the area", undefined)                      
                   }
                   else{
-                      callback(undefined,"Current weather is " + response.body.current.weather_descriptions[0] + " with temperature of " + response.body.current.temperature + " which feels like " + response.body.current.feelslike +".")
-                    //  callback(undefined,{
-                    //     weatherdes:response.body.current.weather_descriptions[0],
-                    //     temperature:response.body.current.temperature,
-                    //     feelslike:response.body.current.feelslike
-                    //  }
+                      callback(undefined,"Current weather is " + response.body.current.weather_descriptions[0] + " with temperature of " + response.body.current.temperature + " which feels like " + response.body.current.feelslike +"." + " Current humidity is " +response.body.current.humidity + "%." )
                   }
               }
     })
